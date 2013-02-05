@@ -1,7 +1,7 @@
 # For Emacs: -*- mode:cperl; mode:folding; coding:utf-8; -*-
 
 package Lingua::SPA::Word2Num;
-# ABSTRACT: Lingua::SPA::Word2Num is module for converting text containing number representation in dutch back into number. Converts whole numbers from 0 up to 999 999 999 999.
+# ABSTRACT: Word 2 number conversion in SPA.
 
 # {{{ use block
 
@@ -14,8 +14,7 @@ use Perl6::Export::Attrs;
 # }}}
 # {{{ variable declarations
 
-my($ver)      = ('$Rev: 440 $' =~ m{(\d+)}xms);
-our $VERSION = $ver / 10_000;
+our $VERSION = 0.0577;
 my $parser   = spa_numerals();
 
 # }}}
@@ -165,12 +164,12 @@ Lingua::SPA::Word2Num
 
 =head1 VERSION
 
-version 0.044
+version 0.0577
 
 text to positive number convertor for Sspanish.
 Input text must be encoded in utf-8.
 
-=head2 $Rev: 440 $
+=head2 $Rev: 577 $
 
 ISO 639-3 namespace.
 
@@ -183,6 +182,8 @@ ISO 639-3 namespace.
  print defined($num) ? $num : "sorry, can't convert this text into number.";
 
 =head1 DESCRIPTION
+
+Word 2 number conversion in SPA.
 
 Lingua::SPA::Word2Num is module for converting text containing number
 representation in dutch back into number. Converts whole numbers from 0 up
